@@ -9,31 +9,43 @@
 <body>
     <h1>Chelsea's Calculator</h1>
     <div class="cal">
-        <form><label class="casio">Casio</label><input type="text"></form>
+        <form>
+            <label class="casio">Casio</label>
+            <input class="entry" type="text" oninput="removeDublicates()" readonly>
+        </form>
         <div>
-            <button class="button button1">7</button>
-            <button class="button button2">8</button>
-            <button class="button button3">9</button>
-            <button class="button button4">÷</button>
+            <button class="button button3" onclick="clearSum()" >CE</button>
+            <button class="button button3" onclick ="memory('m')">m</button>
+            <button class="button button3" onclick="display('^')">^</button>
+            <button class="button button4" onclick="display('%')">÷</button>
         </div>
         <div>
-            <button class="button button1">4</button>
-            <button class="button button2">5</button>
-            <button class="button button3">6</button>
-            <button class="button button4">+</button>
+            <button class="button button3" onclick="display('7')" >7</button>
+            <button class="button button3" onclick ="display('8')">8</button>
+            <button class="button button3" onclick="display('9')">9</button>
+            <button class="button button4" onclick="display('/')">÷</button>
         </div>
         <div>
-            <button class="button button1">1</button>
-            <button class="button button2">2</button>
-            <button class="button button3">3</button>
-            <button class="button button4">-</button>
+            <button class="button button1" onclick="display('4')">4</button>
+            <button class="button button2" onclick="display('5')">5</button>
+            <button class="button button3" onclick="display('6')">6</button>
+            <button class="button button4" onclick="display('+')">+</button>
+        </div>
+        <div>
+            <button class="button button1" onclick="display('1')">1</button>
+            <button class="button button2" onclick="display('2')">2</button>
+            <button class="button button3" onclick="display('3')">3</button>
+            <button class="button button4" onclick="display('-')">-</button>
         </div>
         <div class="lastrow">
-            <button class="button button1">0</button>
-            <button class="button button2">.</button>
-            <button class="button button3">=</button>
-            <button class="button button4">x</button>
+            <button class="button button1" onclick="display('0')">0</button>
+            <button class="button button2" onclick="display('.')">.</button>
+            <button class="button button3"  onclick="answer()">=</button>
+            <button class="button button4" onclick="display('*')">×</button>
         </div>
     </div>
+
+    <p class="pr"></p>
+    <script src="script/code.js"></script>
 </body>
-</html>
+</html> 
